@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bornebit & Spatial System | Portfolio</title>
+    <meta name="description" content="Bornebit & Spatial System — Elite drone pilots, military mission contracts, and agricultural innovation. Portfolio and organizational overview.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">BORNEBIT<span class="logo-accent">&</span>SPATIAL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#facts">Facts</a></li>
+                <li><a href="#projections">Projections</a></li>
+                <li><a href="#risks">Risks</a></li>
+                <li><a href="#strategy">Strategy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">ELITE DRONE OPERATIONS & SPATIAL ANALYTICS</div>
+            <h1 class="hero-title">
+                <span class="line">BORNEBIT</span>
+                <span class="line accent">&amp; SPATIAL</span>
+                <span class="line">SYSTEM</span>
+            </h1>
+            <p class="hero-subtitle">
+                Deploying next-generation drone pilots across military missions, defense contracts, and agricultural innovation. ₦2.5M initial + ₦6.6M reinvestment → ₦460M–₦650M in 10 years.
+            </p>
+            <div class="hero-cta">
+                <a href="#projections" class="btn btn-primary">View 10-Year Projection</a>
+                <a href="#risks" class="btn btn-ghost">Risk Analysis</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="40">0</span>
+                    <span class="stat-label">Active Pilots</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="20">0</span>
+                    <span class="stat-label">On Mission</span>
+                </div>
+                <div class="stat-item stat-item-highlight">
+                    <span class="stat-number">₦9.1M</span>
+                    <span class="stat-label">Total Investment (10yr)</span>
+                </div>
+                <div class="stat-item stat-item-glow">
+                    <span class="stat-number stat-large">~50-70x</span>
+                    <span class="stat-label">Projected 10-Yr Growth</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ABOUT US</span>
+                <h2 class="section-title">Who We Are</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🛩️</div>
+                    <h3>Drone Operations</h3>
+                    <p>Bornebit & Spatial System is a cutting-edge organization specializing in drone piloting, military contract deployment, and spatial analytics. Our 40 elite pilots are trained for high-stakes missions across diverse terrains.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎖️</div>
+                    <h3>Military Missions</h3>
+                    <p>20 of our pilots are currently deployed on active military contracts, executing reconnaissance, surveillance, and strategic operations. Our track record is proven across multiple theaters of operation.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🐄</div>
+                    <h3>Agricultural Arm</h3>
+                    <p>We've invested ₦2.5M in 10 calves (9 female, 1 male) at ₦250K each, with a reinvestment strategy of 3 different-breed cows yearly after Year 3. With 80% fertility, 7% annual losses, and inflation, this projects to ₦460M–₦650M in 10 years.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📡</div>
+                    <h3>Spatial Analytics</h3>
+                    <p>Our spatial system integrates drone-captured data with advanced GIS analytics, providing actionable intelligence for defense, agriculture, and infrastructure mapping.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facts Section -->
+    <section id="facts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ORGANIZATION FACTS</span>
+                <h2 class="section-title">By The Numbers</h2>
+                <p class="section-desc">A real-time snapshot of Bornebit & Spatial System's personnel, assets, and operational status.</p>
+            </div>
+
+            <!-- Pilot Status Overview -->
+            <div class="facts-row">
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <h3>Pilot Deployment Status</h3>
+                        <span class="chart-badge">40 Total Pilots</span>
+                    </div>
+                    <div class="chart-body">
+                        <div class="chart-canvas-wrap">
+                            <canvas id="pilotStatusChart"></canvas>
+                        </div>
+                        <div class="chart-legend-custom" id="pilotLegend">
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #00e68a;"></span>
+                                <span class="legend-label">On Military Contracts</span>
+                                <span class="legend-value">20</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #ff6b6b;"></span>
+                                <span class="legend-label">Out of Jobs / Missions</span>
+                                <span class="legend-value">15</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #4dabf7;"></span>
+                                <span class="legend-label">Employed in Other Sectors</span>
+                                <span class="legend-value">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Overview -->
+            <div class="investment-overview">
+                <div class="investment-header">
+                    <h3>🧮 Starting Investment (2026)</h3>
+                </div>
+                <div class="investment-cards">
+                    <div class="inv-card">
+                        <div class="inv-icon">🐄</div>
+                        <div class="inv-value">10</div>
+                        <div class="inv-label">Initial Calves</div>
+                        <div class="inv-detail">9 Female + 1 Male</div>
+                    </div>
+                    <div class="inv-card">
+                        <div class="inv-icon">💵</div>
+                        <div class="inv-value">₦250K</div>
+                        <div class="inv-label">Cost Per Calf</div>
+                        <div class="inv-detail">Current Market Rate</div>
+                    </div>
+                    <div class="inv-card">
+                        <div class="inv-icon">💰</div>
+                        <div class="inv-value">₦2.5M</div>
+                        <div class="inv-label">Initial Investment</div>
+                        <div class="inv-detail">Starting Capital</div>
+                    </div>
+                    <div class="inv-card reinvestment-card">
+                        <div class="inv-icon">🔄</div>
+                        <div class="inv-value">+21</div>
+                        <div class="inv-label">Cows Purchased (Y4–Y10)</div>
+                        <div class="inv-detail">3 Different Breeds/Year</div>
+                    </div>
+                    <div class="inv-card reinvestment-card">
+                        <div class="inv-icon">📊</div>
+                        <div class="inv-value">~₦9.1M</div>
+                        <div class="inv-label">Total Capital Outlay</div>
+                        <div class="inv-detail">₦2.5M + ₦6.6M Reinvestment</div>
+                    </div>
+                    <div class="inv-card">
+                        <div class="inv-icon">📈</div>
+                        <div class="inv-value">~50-70x</div>
+                        <div class="inv-label">Projected Growth</div>
+                        <div class="inv-detail">₦9.1M → ₦460M–₦650M</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assets & Revenue -->
+            <div class="facts-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Assets Breakdown</h3>
+                        <span class="chart-badge">Livestock & Drone</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="assetsChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Revenue Per Deployment</h3>
+                        <span class="chart-badge">₦20K / Pilot</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Facts Cards -->
+            <div class="key-facts-grid">
+                <div class="fact-card glow-green">
+                    <div class="fact-number">20</div>
+                    <div class="fact-label">Pilots on Active Military Contracts</div>
+                    <div class="fact-bar"><div class="fact-fill" style="width: 50%; background: #00e68a;"></div></div>
+                </div>
+                <div class="fact-card glow-red">
+                    <div class="fact-number">15</div>
+                    <div class="fact-label">Pilots Currently Without Missions</div>
+                    <div class="fact-bar"><div class="fact-fill" style="width: 37.5%; background: #ff6b6b;"></div></div>
+                </div>
+                <div class="fact-card glow-blue">
+                    <div class="fact-number">5</div>
+                    <div class="fact-label">Pilots Employed in Other Sectors</div>
+                    <div class="fact-bar"><div class="fact-fill" style="width: 12.5%; background: #4dabf7;"></div></div>
+                </div>
+                <div class="fact-card glow-amber">
+                    <div class="fact-number">₦20K</div>
+                    <div class="fact-label">Bornebit Earns Per Pilot Deployment</div>
+                    <div class="fact-bar"><div class="fact-fill" style="width: 100%; background: linear-gradient(90deg, #ffd43b, #ff922b);"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projections Section -->
+    <section id="projections">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FUTURE GROWTH</span>
+                <h2 class="section-title">10-Year Cattle Projection</h2>
+                <p class="section-desc">Starting with 10 calves (9♀ + 1♂) at ₦250K each, plus <strong>3 different-breed cows purchased yearly after Year 3</strong>. Breeding begins at Year 2, with 80% fertility rate and 7% annual losses.</p>
+            </div>
+
+            <!-- Key Assumptions Banner -->
+            <div class="assumptions-banner">
+                <div class="assumption-item">
+                    <span class="assumption-icon">🔄</span>
+                    <span class="assumption-text">1 calf/cow/year</span>
+                </div>
+                <div class="assumption-item">
+                    <span class="assumption-icon">⏳</span>
+                    <span class="assumption-text">Breeding starts Year 2</span>
+                </div>
+                <div class="assumption-item">
+                    <span class="assumption-icon">🎯</span>
+                    <span class="assumption-text">80% Fertility Rate</span>
+                </div>
+                <div class="assumption-item">
+                    <span class="assumption-icon">⚠️</span>
+                    <span class="assumption-text">7% Annual Loss</span>
+                </div>
+                <div class="assumption-item">
+                    <span class="assumption-icon">⚧</span>
+                    <span class="assumption-text">50/50 Gender Split</span>
+                </div>
+            </div>
+
+            <!-- ★ REINVESTMENT STRATEGY BANNER — NEW ★ -->
+            <div class="reinvestment-banner">
+                <div class="reinvestment-header">
+                    <span class="reinvestment-icon">★</span>
+                    <h3>Self-Investment Strategy — 3 Cows/Year After Year 3</h3>
+                </div>
+                <div class="reinvestment-details">
+                    <div class="reinvest-item">
+                        <div class="reinvest-breed-icon">🐂</div>
+                        <div class="reinvest-info">
+                            <span class="reinvest-breed">Sokoto Gudali</span>
+                            <span class="reinvest-trait">Large frame, high milk yield</span>
+                        </div>
+                    </div>
+                    <div class="reinvest-item">
+                        <div class="reinvest-breed-icon">🐄</div>
+                        <div class="reinvest-info">
+                            <span class="reinvest-breed">White Fulani</span>
+                            <span class="reinvest-trait">Disease resistant, good fertility</span>
+                        </div>
+                    </div>
+                    <div class="reinvest-item">
+                        <div class="reinvest-breed-icon">🦬</div>
+                        <div class="reinvest-info">
+                            <span class="reinvest-breed">Red Bororo</span>
+                            <span class="reinvest-trait">Heat tolerant, strong genetics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reinvestment-summary">
+                    <span class="reinvest-stat">21 total cows purchased</span>
+                    <span class="reinvest-divider">•</span>
+                    <span class="reinvest-stat">~₦6.6M additional investment</span>
+                    <span class="reinvest-divider">•</span>
+                    <span class="reinvest-stat">Genetic diversity boost</span>
+                </div>
+            </div>
+
+            <!-- Herd Growth Chart -->
+            <div class="facts-row">
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <h3>Projected Herd Growth (10 Years)</h3>
+                        <span class="chart-badge">Starting: 9♀ + 1♂ + Reinvestment</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="projectionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reinvestment Tracking Chart — NEW -->
+            <div class="facts-row">
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <h3>🔄 Reinvestment Tracker — Purchased Cows & Cost</h3>
+                        <span class="chart-badge reinvest-badge">3 Cows/Year from Y4</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="reinvestmentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year-by-Year Table -->
+            <div class="chart-card wide table-card">
+                <div class="chart-header">
+                    <h3>📊 Year-by-Year Breakdown</h3>
+                    <span class="chart-badge">With Reinvestment</span>
+                </div>
+                <div class="table-wrapper">
+                    <table id="yearlyTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Herd Size</th>
+                                <th>New Calves</th>
+                                <th>Purchased ★</th>
+                                <th>Losses (7%)</th>
+                                <th>Net Change</th>
+                                <th>Price/Cow</th>
+                                <th>Total Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="yearlyTableBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Value Projection Charts -->
+            <div class="facts-row">
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <h3>💰 Herd Value — 3 Scenarios</h3>
+                        <span class="chart-badge">Conservative → Aggressive</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="scenarioChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario Cards — UPDATED values -->
+            <div class="scenario-grid">
+                <div class="scenario-card conservative">
+                    <div class="scenario-label">Scenario A — Conservative</div>
+                    <div class="scenario-params">185 cattle × ₦2.5M avg</div>
+                    <div class="scenario-value">₦462M</div>
+                    <div class="scenario-bar"><div class="scenario-fill" style="width: 53%;"></div></div>
+                </div>
+                <div class="scenario-card moderate">
+                    <div class="scenario-label">Scenario B — Moderate</div>
+                    <div class="scenario-params">185 cattle × ₦3M avg</div>
+                    <div class="scenario-value">₦555M</div>
+                    <div class="scenario-bar"><div class="scenario-fill" style="width: 78%;"></div></div>
+                </div>
+                <div class="scenario-card aggressive">
+                    <div class="scenario-label">Scenario C — Aggressive</div>
+                    <div class="scenario-params">185 cattle × ₦3.5M avg</div>
+                    <div class="scenario-value">₦647M</div>
+                    <div class="scenario-bar"><div class="scenario-fill" style="width: 100%;"></div></div>
+                </div>
+            </div>
+
+            <!-- Deployment Revenue -->
+            <div class="facts-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Livestock Value Over Time</h3>
+                        <span class="chart-badge">₦250K → ₦2.5M–₦3.5M</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="valueChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Deployment Revenue Growth</h3>
+                        <span class="chart-badge">₦20K / Deployment</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="deploymentRevenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projection Summary Cards — UPDATED values -->
+            <div class="projection-summary">
+                <div class="proj-card">
+                    <div class="proj-icon">🐄</div>
+                    <div class="proj-value">9♀ + 1♂</div>
+                    <div class="proj-label">Starting Herd (2026)</div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-icon">💵</div>
+                    <div class="proj-value">₦2.5M</div>
+                    <div class="proj-label">Initial Investment</div>
+                </div>
+                <div class="proj-card reinvest-proj-card">
+                    <div class="proj-icon">🔄</div>
+                    <div class="proj-value">+21 Cows</div>
+                    <div class="proj-label">Reinvestment (Y4–Y10)</div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-icon">📈</div>
+                    <div class="proj-value">~185</div>
+                    <div class="proj-label">Herd Size (Year 10)</div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-icon">💰</div>
+                    <div class="proj-value">₦460M–₦650M</div>
+                    <div class="proj-label">Risk-Adjusted Value</div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-icon">🔥</div>
+                    <div class="proj-value">~50-70x</div>
+                    <div class="proj-label">Growth Multiplier</div>
+                </div>
+            </div>
+
+            <!-- Key Insight box — UPDATED -->
+            <div class="insight-box">
+                <div class="insight-header">🧠 Key Insight — Reinvestment Supercharges Returns</div>
+                <div class="insight-body">
+                    <p>Your mom's real example: <strong>₦65K (2013) → ₦1.2M (2025)</strong> — that's <strong>~18x growth in 12 years</strong>, proving livestock is one of the strongest inflation hedges in Nigeria.</p>
+                    <p>Your investment: <strong>₦9.1M total (₦2.5M + ₦6.6M reinvestment) → ₦460M–₦650M in 10 years</strong>, driven by:</p>
+                    <div class="insight-drivers">
+                        <span class="driver">🔄 Reproduction</span>
+                        <span class="driver">📈 Inflation</span>
+                        <span class="driver">💎 Asset Appreciation</span>
+                        <span class="driver">★ Breed Diversity</span>
+                        <span class="driver">🐄 Annual Reinvestment</span>
+                    </div>
+                    <p class="insight-reinvest-note">★ Purchasing 3 different-breed cows annually after Year 3 accelerates compound growth through genetic diversity and expanded breeding capacity — turning a ₦6.6M additional investment into ₦350M+ of added returns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Assessment Section -->
+    <section id="risks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag risk-tag">⚠️ RISK ASSESSMENT</span>
+                <h2 class="section-title">Risk-Adjusted Outlook</h2>
+                <p class="section-desc">Real-life risk factors that can significantly impact returns. Understanding these is critical for realistic planning.</p>
+            </div>
+
+            <!-- Risk Radar Chart -->
+            <div class="facts-row">
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <h3>Risk Impact Analysis</h3>
+                        <span class="chart-badge risk-badge">Critical Factors</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="riskRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Cards -->
+            <div class="risk-grid">
+                <div class="risk-card risk-high">
+                    <div class="risk-severity">HIGH</div>
+                    <div class="risk-icon">🦠</div>
+                    <h3>Disease Outbreak</h3>
+                    <p>Could wipe out 20–40% of herd in a single event. Bovine diseases like PPR, CBPP, and trypanosomiasis are common in Nigerian cattle.</p>
+                    <div class="risk-impact">
+                        <span class="risk-label">Impact:</span>
+                        <div class="risk-meter"><div class="risk-fill" style="width: 85%; background: linear-gradient(90deg, #ff6b6b, #e03131);"></div></div>
+                    </div>
+                </div>
+                <div class="risk-card risk-medium">
+                    <div class="risk-severity">MEDIUM</div>
+                    <div class="risk-icon">🌾</div>
+                    <h3>Feed Costs / Drought</h3>
+                    <p>Slows reproduction and growth significantly. Dry seasons in Northern Nigeria can reduce grazing availability by 50-70%.</p>
+                    <div class="risk-impact">
+                        <span class="risk-label">Impact:</span>
+                        <div class="risk-meter"><div class="risk-fill" style="width: 65%; background: linear-gradient(90deg, #ffd43b, #ff922b);"></div></div>
+                    </div>
+                </div>
+                <div class="risk-card risk-high">
+                    <div class="risk-severity">HIGH</div>
+                    <div class="risk-icon">🔒</div>
+                    <h3>Theft / Security</h3>
+                    <p>Extremely common issue in Nigerian livestock farming. Cattle rustling can result in total loss if herds are not well-secured.</p>
+                    <div class="risk-impact">
+                        <span class="risk-label">Impact:</span>
+                        <div class="risk-meter"><div class="risk-fill" style="width: 80%; background: linear-gradient(90deg, #ff6b6b, #e03131);"></div></div>
+                    </div>
+                </div>
+                <div class="risk-card risk-medium">
+                    <div class="risk-severity">MEDIUM</div>
+                    <div class="risk-icon">📉</div>
+                    <h3>Market Fluctuations</h3>
+                    <p>Prices may not rise as fast as historical trends. Economic downturns or policy changes could suppress livestock values temporarily.</p>
+                    <div class="risk-impact">
+                        <span class="risk-label">Impact:</span>
+                        <div class="risk-meter"><div class="risk-fill" style="width: 50%; background: linear-gradient(90deg, #ffd43b, #ff922b);"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk-Adjusted Value Chart -->
+            <div class="facts-row">
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <h3>Risk-Adjusted Value Scenarios</h3>
+                        <span class="chart-badge">Best vs Worst Case</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="riskAdjustedChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk-Adjusted Outcome — UPDATED -->
+            <div class="adjusted-outcome">
+                <div class="outcome-header">🧾 Adjusted Realistic Outcome (After Risk Factors)</div>
+                <div class="outcome-range">
+                    <div class="outcome-low">
+                        <div class="outcome-label">Floor (Worst Case)</div>
+                        <div class="outcome-value">₦320M</div>
+                    </div>
+                    <div class="outcome-bar">
+                        <div class="outcome-fill"></div>
+                        <div class="outcome-marker" style="left: 30%;">₦320M</div>
+                        <div class="outcome-marker" style="left: 75%;">₦650M</div>
+                    </div>
+                    <div class="outcome-high">
+                        <div class="outcome-label">Ceiling (Best Case)</div>
+                        <div class="outcome-value">₦650M</div>
+                    </div>
+                </div>
+                <p class="outcome-note">Expected practical range after 10 years, factoring disease, theft, drought, and market risks. Total capital outlay: ₦9.1M (₦2.5M initial + ₦6.6M reinvestment).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag strategy-tag">💡 MAXIMIZE RETURNS</span>
+                <h2 class="section-title">Growth Strategy</h2>
+                <p class="section-desc">Actionable steps to push your returns toward the higher end of projections.</p>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-number">01</div>
+                    <div class="strategy-icon">💉</div>
+                    <h3>Vaccinate Consistently</h3>
+                    <p>Reduces mortality massively — from 7% to as low as 2-3%. This is the single highest-ROI action you can take.</p>
+                    <div class="strategy-impact">Mortality ↓70%</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-number">02</div>
+                    <div class="strategy-icon">🧬</div>
+                    <h3>Diversify Breeds</h3>
+                    <p>Your reinvestment strategy of buying 3 different breeds yearly (Sokoto Gudali, White Fulani, Red Bororo) ensures genetic diversity, reducing disease susceptibility and improving calf quality.</p>
+                    <div class="strategy-impact">Resilience ↑40%</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-number">03</div>
+                    <div class="strategy-icon">💸</div>
+                    <h3>Sell Males Early</h3>
+                    <p>Generate cash flow by selling excess males at 1-2 years. Keep only top breeding bulls. Reinvest proceeds into more breeding stock.</p>
+                    <div class="strategy-impact">Cash Flow ↑</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-number">04</div>
+                    <div class="strategy-icon">🛡️</div>
+                    <h3>Reinforce Security</h3>
+                    <p>Invest in night guards, GPS tracking, and community security networks. Theft prevention has the highest downside protection.</p>
+                    <div class="strategy-impact">Loss ↓90%</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-number">05</div>
+                    <div class="strategy-icon">🔄</div>
+                    <h3>Reinvest Annually</h3>
+                    <p>The 3-cows-per-year strategy compounds exponentially. Each purchased cow produces ~5-7 offspring over its lifetime, multiplying returns dramatically.</p>
+                    <div class="strategy-impact">Compounding ↑↑↑</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-number">06</div>
+                    <div class="strategy-icon">📋</div>
+                    <h3>Keep Records</h3>
+                    <p>Very underrated — track births, deaths, health events, and market prices. Data drives better breeding and selling decisions.</p>
+                    <div class="strategy-impact">Efficiency ↑25%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Contact Bornebit</h2>
+                <p class="section-desc">Ready to partner with us? Reach out for military contracts, drone services, or investment opportunities.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>info@bornebit.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>+234 XXX XXX XXXX</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Nigeria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">◈</span>
+                    <span class="logo-text">BORNEBIT<span class="logo-accent">&</span>SPATIAL</span>
+                </div>
+                <p class="footer-text">© 2026 Bornebit & Spatial System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
