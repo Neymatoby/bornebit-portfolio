@@ -1,0 +1,164 @@
+﻿diff --git a/index.html b/index.html
+index 1b6daae..f04aab2 100644
+--- a/index.html
++++ b/index.html
+@@ -48,7 +48,7 @@
+                 <span class="line">SYSTEM</span>
+             </h1>
+             <p class="hero-subtitle">
+-                Deploying next-generation drone pilots across military missions, defense contracts, and agricultural innovation. Γéª2.5M initial + Γéª6.6M reinvestment ΓåÆ Γéª460MΓÇôΓéª650M in 10 years.
++                Deploying next-generation drone pilots across military missions, defense contracts, and agricultural innovation. Γéª2.5M initial + Γéª87M reinvestment ΓåÆ Γéª740MΓÇôΓéª1.3B in 10 years.
+             </p>
+             <div class="hero-cta">
+                 <a href="#projections" class="btn btn-primary">View 10-Year Projection</a>
+@@ -64,11 +64,11 @@
+                     <span class="stat-label">On Mission</span>
+                 </div>
+                 <div class="stat-item stat-item-highlight">
+-                    <span class="stat-number">Γéª9.1M</span>
++                    <span class="stat-number">~Γéª90M</span>
+                     <span class="stat-label">Total Investment (10yr)</span>
+                 </div>
+                 <div class="stat-item stat-item-glow">
+-                    <span class="stat-number stat-large">~50-70x</span>
++                    <span class="stat-number stat-large">~8-14x</span>
+                     <span class="stat-label">Projected 10-Yr Growth</span>
+                 </div>
+             </div>
+@@ -100,7 +100,7 @@
+                 <div class="about-card">
+                     <div class="about-icon">≡ƒÉä</div>
+                     <h3>Agricultural Arm</h3>
+-                    <p>We've invested Γéª2.5M in 10 calves (9 female, 1 male) at Γéª250K each, with a reinvestment strategy of 3 different-breed cows yearly after Year 3. With 80% fertility, 7% annual losses, and inflation, this projects to Γéª460MΓÇôΓéª650M in 10 years.</p>
++                    <p>We've invested Γéª2.5M in 10 calves (9 female, 1 male) at Γéª250K each. A mature cow is now worth Γéª1.5M (up from Γéª65K in 2003/2004 ΓÇö 23├ù in 22 years). With a reinvestment strategy of 3 different-breed mature cows yearly after Year 3, 80% fertility, 7% annual losses, and continued inflation, this projects to Γéª740MΓÇôΓéª1.3B in 10 years.</p>
+                 </div>
+                 <div class="about-card">
+                     <div class="about-icon">≡ƒôí</div>
+@@ -184,15 +184,15 @@
+                     </div>
+                     <div class="inv-card reinvestment-card">
+                         <div class="inv-icon">≡ƒôè</div>
+-                        <div class="inv-value">~Γéª9.1M</div>
++                        <div class="inv-value">~Γéª90M</div>
+                         <div class="inv-label">Total Capital Outlay</div>
+-                        <div class="inv-detail">Γéª2.5M + Γéª6.6M Reinvestment</div>
++                        <div class="inv-detail">Γéª2.5M + ~Γéª87M Reinvestment</div>
+                     </div>
+                     <div class="inv-card">
+                         <div class="inv-icon">≡ƒôê</div>
+-                        <div class="inv-value">~50-70x</div>
++                        <div class="inv-value">~8-14x</div>
+                         <div class="inv-label">Projected Growth</div>
+-                        <div class="inv-detail">Γéª9.1M ΓåÆ Γéª460MΓÇôΓéª650M</div>
++                        <div class="inv-detail">~Γéª90M ΓåÆ Γéª740MΓÇôΓéª1.3B</div>
+                     </div>
+                 </div>
+             </div>
+@@ -310,7 +310,7 @@
+                 <div class="reinvestment-summary">
+                     <span class="reinvest-stat">21 total cows purchased</span>
+                     <span class="reinvest-divider">ΓÇó</span>
+-                    <span class="reinvest-stat">~Γéª6.6M additional investment</span>
++                    <span class="reinvest-stat">~Γéª87M additional investment</span>
+                     <span class="reinvest-divider">ΓÇó</span>
+                     <span class="reinvest-stat">Genetic diversity boost</span>
+                 </div>
+@@ -386,20 +386,20 @@
+             <div class="scenario-grid">
+                 <div class="scenario-card conservative">
+                     <div class="scenario-label">Scenario A ΓÇö Conservative</div>
+-                    <div class="scenario-params">185 cattle ├ù Γéª2.5M avg</div>
+-                    <div class="scenario-value">Γéª462M</div>
+-                    <div class="scenario-bar"><div class="scenario-fill" style="width: 53%;"></div></div>
++                    <div class="scenario-params">185 cattle ├ù Γéª4M avg</div>
++                    <div class="scenario-value">Γéª740M</div>
++                    <div class="scenario-bar"><div class="scenario-fill" style="width: 57%;"></div></div>
+                 </div>
+                 <div class="scenario-card moderate">
+                     <div class="scenario-label">Scenario B ΓÇö Moderate</div>
+-                    <div class="scenario-params">185 cattle ├ù Γéª3M avg</div>
+-                    <div class="scenario-value">Γéª555M</div>
++                    <div class="scenario-params">185 cattle ├ù Γéª5.5M avg</div>
++                    <div class="scenario-value">Γéª1.02B</div>
+                     <div class="scenario-bar"><div class="scenario-fill" style="width: 78%;"></div></div>
+                 </div>
+                 <div class="scenario-card aggressive">
+                     <div class="scenario-label">Scenario C ΓÇö Aggressive</div>
+-                    <div class="scenario-params">185 cattle ├ù Γéª3.5M avg</div>
+-                    <div class="scenario-value">Γéª647M</div>
++                    <div class="scenario-params">185 cattle ├ù Γéª7M avg</div>
++                    <div class="scenario-value">Γéª1.3B</div>
+                     <div class="scenario-bar"><div class="scenario-fill" style="width: 100%;"></div></div>
+                 </div>
+             </div>
+@@ -409,7 +409,7 @@
+                 <div class="chart-card">
+                     <div class="chart-header">
+                         <h3>Livestock Value Over Time</h3>
+-                        <span class="chart-badge">Γéª250K ΓåÆ Γéª2.5MΓÇôΓéª3.5M</span>
++                        <span class="chart-badge">Γéª250K ΓåÆ Γéª4MΓÇôΓéª7M</span>
+                     </div>
+                     <div class="chart-body">
+                         <canvas id="valueChart"></canvas>
+@@ -450,12 +450,12 @@
+                 </div>
+                 <div class="proj-card">
+                     <div class="proj-icon">≡ƒÆ░</div>
+-                    <div class="proj-value">Γéª460MΓÇôΓéª650M</div>
++                    <div class="proj-value">Γéª740MΓÇôΓéª1.3B</div>
+                     <div class="proj-label">Risk-Adjusted Value</div>
+                 </div>
+                 <div class="proj-card">
+                     <div class="proj-icon">≡ƒöÑ</div>
+-                    <div class="proj-value">~50-70x</div>
++                    <div class="proj-value">~8-14x</div>
+                     <div class="proj-label">Growth Multiplier</div>
+                 </div>
+             </div>
+@@ -464,16 +464,17 @@
+             <div class="insight-box">
+                 <div class="insight-header">≡ƒºá Key Insight ΓÇö Reinvestment Supercharges Returns</div>
+                 <div class="insight-body">
+-                    <p>Your mom's real example: <strong>Γéª65K (2013) ΓåÆ Γéª1.2M (2025)</strong> ΓÇö that's <strong>~18x growth in 12 years</strong>, proving livestock is one of the strongest inflation hedges in Nigeria.</p>
+-                    <p>Your investment: <strong>Γéª9.1M total (Γéª2.5M + Γéª6.6M reinvestment) ΓåÆ Γéª460MΓÇôΓéª650M in 10 years</strong>, driven by:</p>
++                    <p>Your mom's real example: <strong>Γéª65K (2003/2004) ΓåÆ Γéª1.5M (2026)</strong> ΓÇö that's <strong>~23├ù growth in 22 years</strong> (~14.7% annual growth), proving livestock is one of the strongest inflation hedges in Nigeria.</p>
++                    <p>Current prices: <strong>1 calf = Γéª250K | 1 mature cow = Γéª1.5M</strong></p>
++                    <p>Your investment: <strong>~Γéª90M total (Γéª2.5M + ~Γéª87M reinvestment) ΓåÆ Γéª740MΓÇôΓéª1.3B in 10 years</strong>, driven by:</p>
+                     <div class="insight-drivers">
+                         <span class="driver">≡ƒöä Reproduction</span>
+-                        <span class="driver">≡ƒôê Inflation</span>
++                        <span class="driver">≡ƒôê Inflation (~15%/yr)</span>
+                         <span class="driver">≡ƒÆÄ Asset Appreciation</span>
+                         <span class="driver">Γÿà Breed Diversity</span>
+                         <span class="driver">≡ƒÉä Annual Reinvestment</span>
+                     </div>
+-                    <p class="insight-reinvest-note">Γÿà Purchasing 3 different-breed cows annually after Year 3 accelerates compound growth through genetic diversity and expanded breeding capacity ΓÇö turning a Γéª6.6M additional investment into Γéª350M+ of added returns.</p>
++                    <p class="insight-reinvest-note">Γÿà Purchasing 3 different-breed mature cows at Γéª1.5M+ each annually after Year 3 accelerates compound growth through genetic diversity and expanded breeding capacity ΓÇö turning ~Γéª87M additional investment into Γéª650M+ of added returns.</p>
+                 </div>
+             </div>
+         </div>
+@@ -564,19 +565,19 @@
+                 <div class="outcome-range">
+                     <div class="outcome-low">
+                         <div class="outcome-label">Floor (Worst Case)</div>
+-                        <div class="outcome-value">Γéª320M</div>
++                        <div class="outcome-value">Γéª520M</div>
+                     </div>
+                     <div class="outcome-bar">
+                         <div class="outcome-fill"></div>
+-                        <div class="outcome-marker" style="left: 30%;">Γéª320M</div>
+-                        <div class="outcome-marker" style="left: 75%;">Γéª650M</div>
++                        <div class="outcome-marker" style="left: 30%;">Γéª520M</div>
++                        <div class="outcome-marker" style="left: 75%;">Γéª1.3B</div>
+                     </div>
+                     <div class="outcome-high">
+                         <div class="outcome-label">Ceiling (Best Case)</div>
+-                        <div class="outcome-value">Γéª650M</div>
++                        <div class="outcome-value">Γéª1.3B</div>
+                     </div>
+                 </div>
+-                <p class="outcome-note">Expected practical range after 10 years, factoring disease, theft, drought, and market risks. Total capital outlay: Γéª9.1M (Γéª2.5M initial + Γéª6.6M reinvestment).</p>
++                <p class="outcome-note">Expected practical range after 10 years, factoring disease, theft, drought, and market risks. Total capital outlay: ~Γéª90M (Γéª2.5M initial + ~Γéª87M reinvestment in mature cows at Γéª1.5M+ each).</p>
+             </div>
+         </div>
+     </section>

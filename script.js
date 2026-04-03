@@ -94,7 +94,7 @@ function initScrollReveal() {
 }
 
 /* =============================================
-   REALISTIC CATTLE BREEDING MODEL (V2)
+   REALISTIC CATTLE BREEDING MODEL (V3)
    =============================================
    Based on Nigerian conditions:
    
@@ -102,10 +102,11 @@ function initScrollReveal() {
    - 10 calves (9 female, 1 male)
    - Cost per calf: ₦250,000
    - Total investment: ₦2.5M
+   - Average mature cow price NOW (2026): ₦1,500,000
 
-   SELF-INVESTMENT STRATEGY (NEW):
+   SELF-INVESTMENT STRATEGY:
    - After Year 3, buy 3 cows of DIFFERENT BREEDS yearly
-   - These are mature, breeding-age females (purchased at ~₦300K-₦500K each depending on year)
+   - These are mature, breeding-age females (purchased at ~₦1.5M-₦3M each depending on year)
    - Total additional purchases: 3 cows × 7 years (Y4-Y10) = 21 cows
    - Breeds: e.g., Sokoto Gudali, White Fulani, Red Bororo (genetic diversity)
    
@@ -115,8 +116,9 @@ function initScrollReveal() {
    - 80% fertility rate
    - 7% annual mortality/loss rate (disease, theft, accidents)
    - 50% male/female calf split
-   - Price reference: ₦65K (2013) → ₦1.2M (2025)
-   - Conservative mature cow price at Year 10: ₦2.5M–₦3.5M
+   - REAL EXAMPLE (Mom): ₦65K (2003/2004) → ₦1.5M (2026) = ~23x in 22 years
+   - This equals ~14.7% annual growth rate
+   - Conservative mature cow price at Year 10: ₦4M–₦7M
    ============================================= */
 
 /*
@@ -157,11 +159,11 @@ const COWS_PURCHASED_PER_YEAR = 3;
 const REINVESTMENT_END_YEAR = 10;
 
 // Purchase cost per cow at each year (increases with inflation)
+// Mature cows cost ₦1.5M in 2026, rising ~15% annually
 function getPurchaseCostPerCow(year) {
-    // Starting at ~₦300K in Y4, rising with ~25% inflation
-    const baseCost = 300; // ₦300K at year 4
-    const inflationRate = 1.25;
-    return Math.round(baseCost * Math.pow(inflationRate, year - 4));
+    const baseCost = 1500; // ₦1.5M at year 0 (2026) for a mature cow
+    const inflationRate = 1.15; // ~15% annual price increase
+    return Math.round(baseCost * Math.pow(inflationRate, year));
 }
 
 // Deterministic herd data WITH reinvestment after Year 3
@@ -206,17 +208,20 @@ function getCumulativeReinvestmentCost(upToYear) {
     return cost;
 }
 
-// Total reinvestment over 7 years ≈ ₦6.6M
+// Total reinvestment over 7 years
 const totalReinvestment = getCumulativeReinvestmentCost(10);
 const totalCapitalOutlay = 2500 + totalReinvestment; // ₦2.5M initial + reinvestment
 
-// Price model: ₦250K now → ₦2.5M–₦3.5M in 10 years (based on ₦65K→₦1.2M historical trend)
+// Price model: ₦250K (calf) now → ₦4M–₦7M in 10 years
+// Based on REAL DATA: ₦65K (2003/2004) → ₦1.5M (2026) = ~14.7% annual growth
+// Mature cow NOW = ₦1.5M. Calf NOW = ₦250K.
+// As calves mature over 10 years, they appreciate from calf → mature cow + inflation
 function getPricePerCow(year, scenario) {
-    const startPrice = 250; // ₦250K
+    const startPrice = 250; // ₦250K per calf now
     const endPrices = {
-        conservative: 2500,  // ₦2.5M
-        moderate: 3000,      // ₦3M
-        aggressive: 3500     // ₦3.5M
+        conservative: 4000,  // ₦4M — cautious growth
+        moderate: 5500,      // ₦5.5M — trend continuation
+        aggressive: 7000     // ₦7M — bullish market
     };
     const endPrice = endPrices[scenario] || endPrices.moderate;
     // Exponential growth to match inflation
@@ -530,7 +535,7 @@ function createScenarioChart() {
             labels: years,
             datasets: [
                 {
-                    label: 'Conservative (₦2.5M/cow @Y10)',
+                    label: 'Conservative (₦4M/cow @Y10)',
                     data: conservativeValues,
                     borderColor: '#4dabf7',
                     backgroundColor: 'rgba(77, 171, 247, 0.06)',
@@ -543,7 +548,7 @@ function createScenarioChart() {
                     pointHoverRadius: 8,
                 },
                 {
-                    label: 'Moderate (₦3M/cow @Y10)',
+                    label: 'Moderate (₦5.5M/cow @Y10)',
                     data: moderateValues,
                     borderColor: '#ffd43b',
                     backgroundColor: 'rgba(255, 212, 59, 0.08)',
@@ -556,7 +561,7 @@ function createScenarioChart() {
                     pointHoverRadius: 8,
                 },
                 {
-                    label: 'Aggressive (₦3.5M/cow @Y10)',
+                    label: 'Aggressive (₦7M/cow @Y10)',
                     data: aggressiveValues,
                     borderColor: '#00e68a',
                     backgroundColor: 'rgba(0, 230, 138, 0.06)',
